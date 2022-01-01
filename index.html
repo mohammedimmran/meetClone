@@ -13,6 +13,33 @@
   <!-- css -->
   <link rel="stylesheet" href="public/assets/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+ 
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <script src="./public/assets/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+
+<script>
+  $(function(){
+    const urlParams = new URLSearchParams(window.location.search);
+    var meeting_id = urlParams.get("meetingID");
+    var user_id = window.prompt("Enter your emailID");
+
+    if(!user_id || !meeting_id){
+      alert("User id or meeting ID is missing");
+      window.location.href="/action.html";
+    }
+    $("meetingContainer").show();
+
+    MyApp._init(user_id,meeting_id);
+  });
+</script>
+
+
+
+
   <title>Meet</title>
 </head>
 

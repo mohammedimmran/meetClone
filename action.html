@@ -55,15 +55,15 @@
             })
             $(document).on("click",".join-action",function(){
                 var value = $(".enter-code").val();
-                var meeturl = window.location.origin+"?meetID="+value;
+                var meeturl = window.location.origin+"?meetingID="+value;
                 window.location.replace(meeturl);
             })
             $(document).on("click",".new-meeting",function(){
                 var eight_d_value = Math.floor(Math.random()*100000000);
-                var meeturl = window.location.origin+"?meetID="+eight_d_value;
+                var meeturl = window.location.origin+"?meetingID="+eight_d_value;
                 window.location.replace(meeturl);
             })
-        })
+        });
     </script>
   </body>
 </html>
